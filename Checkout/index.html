@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+
+    <link rel="stylesheet" href="app.css">
+    <script src="https://kit.fontawesome.com/b356958465.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/resets.css">
+
+</head>
+
+<body>
+    <div class="nav">
+        <a class="anchor-btn" href="../home.html">Home</a>
+    </div>
+    <h3 class="main-title">Checkout page</h3>
+    <section class="main">
+        <div class="products main-cell">
+            <div class="product">
+                <div class="title">T-shirt</div>
+                <div class="price"> <span class="cost">15.99</span><span class="symbol">&#36;</span></div>
+                <button class="add-to-cart"><span><i class="fa-solid fa-cart-shopping"></i></span> Add to cart</button>
+            </div>
+            <div class="product">
+                <div class="title">Jeans</div>
+                <div class="price"> <span class="cost">22.99</span><span class="symbol">&#36;</span></div>
+                <button class="add-to-cart"><span><i class="fa-solid fa-cart-shopping"></i></span> Add to cart</button>
+            </div>
+            <div class="product">
+                <div class="title">Parka</div>
+                <div class="price"> <span class="cost">29.99</span><span class="symbol">&#36;</span></div>
+                <button class="add-to-cart"><span><i class="fa-solid fa-cart-shopping"></i></span> Add to cart</button>
+            </div>
+        </div>
+        <div class="cart main-cell" id="no-content">
+            <h4 class="emptyCart">There are no products in your shopping cart!</h4>
+        </div>
+
+        <div class="cart main-cell" id="content">
+            <div class="cart-title">
+                Products in your shopping cart
+            </div>
+            <div class="cart-content">
+                <div class="description">
+                    <div>Product</div>
+                    <div class="float-right">Quantity</div>
+                    <div class="float-right">Value</div>
+                </div>
+
+            </div>
+            <div class="total-cost">Total: <span>&#36;</span><span id="total">0</span></div>
+            <button class="confirm-purchase">Continue</button>
+        </div>
+
+    </section>
+
+
+
+    <script src="app.js" async></script>
+</body>
+
+</html>

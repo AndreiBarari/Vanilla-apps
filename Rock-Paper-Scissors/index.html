@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/resets.css">
+</head>
+
+<body>
+    <div class="nav">
+        <a class="anchor-btn" href="../home.html">Home</a>
+    </div>
+    <div class="main">
+        <h1>Rock, paper, scissors game!</h1>
+
+        <div class="choices">
+            <button id="rock" class="choice" value="rock"></button>
+            <button id="paper" class="choice" value="paper"></button>
+            <button id="scissor" class="choice" value="scissors"></button>
+        </div>
+
+        <div class="gameResults">
+            <div class="roundResults">
+                <span class="player">Player</span>
+                <span class="score" id="playerScore"></span>
+                <span id="playerChoice"></span>
+            </div>
+            <span class="" id="result"></span>
+            <div class="roundResults">
+                <span class="player">NPC</span>
+                <span class="score" id="computerScore"></span>
+                <span id="npcChoice"></span>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <input id="refresh" type="button" value="New game!">
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

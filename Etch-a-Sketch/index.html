@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/resets.css">
+
+
+</head>
+
+<body>
+    <div class="nav">
+        <a class="anchor-btn" href="../home.html">Home</a>
+    </div>
+
+    <div class="main" id="main">
+        <div class="rightMenu">
+            <button id="rainbow" onclick="color()">Rainbow</button>
+            <button id="blackColor">Black</button>
+            <button id="erase">Eraser</button>
+
+        </div>
+        <div class="container" id="container">
+        </div>
+        <div class="leftMenu">
+            <button id="resize">Resize</button>
+
+            <button id="reset">Clear</button>
+            <input id="colorPicker" type="color">
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

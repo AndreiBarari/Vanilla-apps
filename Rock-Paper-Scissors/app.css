@@ -1,0 +1,119 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #d3d3d3;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  justify-content: baseline;
+}
+.choices {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+}
+.choice {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+  border: none;
+}
+.choice:hover {
+  transform: scale(1.05);
+}
+#rock {
+  background-image: url("./assets/rock.jpg");
+  background-size: 188px 188px;
+}
+#paper {
+  background-image: url("./assets/paper.jpg");
+  background-size: 188px 188px;
+}
+#scissor {
+  background-image: url("./assets/scissor.jpg");
+  background-size: 188px 188px;
+}
+
+.gameResults {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #006b88;
+}
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 144px;
+  font-size: 2.5em;
+}
+#playerScore {
+  background-image: url("./assets/result1.png");
+  background-size: 144px 144px;
+}
+#computerScore {
+  background-image: url("./assets/result2.png");
+  background-size: 144px 144px;
+}
+#result {
+  text-align: center;
+  padding: 40px 0;
+  overflow: hidden;
+  height: 144px;
+  width: 264px;
+  background-image: url("./assets/text.jpg");
+  background-size: 144px 144px;
+}
+
+#refresh {
+  visibility: hidden;
+  font-size: 1em;
+  font-weight: bold;
+  width: 124px;
+  height: 48px;
+  padding: 6px 12px;
+  border: 2px solid #11887b;
+  color: #11887b;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+#refresh:hover {
+  border-color: #fff;
+  background-color: #11887b;
+  color: #fff;
+}
+
+.roundResults {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.player {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#playerChoice,
+#npcChoice {
+  font-size: 0.8em;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.anchor-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 15px;
+  color: #111;
+  background-color: transparent;
+  transition: ease-in-out 0.5s;
+}
+.anchor-btn:hover {
+  background-color: #444;
+  color: #fff;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Keyboard</title>
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/resets.css">
+
+</head>
+
+<body>
+    <div class="nav">
+        <a class="anchor-btn" href="../home.html">Home</a>
+    </div>
+    <div class="paino flex-col">
+        <header class="flex-row">
+            <h4>Electronic keyboard</h4>
+            <div class="collumn volume-slider flex-col">
+                <span>Volume</span> <input type="range" id="volume" min="0" max="1" value="0.5" step="any">
+            </div>
+        </header>
+        <div id="main">
+        </div>
+    </div>
+
+
+    <!-- <script type="module" src="app.js"></script> -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
