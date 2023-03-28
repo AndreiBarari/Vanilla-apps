@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/resets.css">
+
+       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+
+<body class="sunny sunny-theme">
+    <div class="nav">
+        <a class="anchor-btn" href="../index.html">Home</a>
+    </div>
+
+    <section class="main flex-row sunny-theme">
+<div>
+    <div class="form-header">
+        <button id="switch" class="sunny-theme">
+            <i class='bx bx-sun' ></i>
+        </button>
+    </div>
+            <form action="" id="search-form" class="flex-col">
+                <label for="search-location">Location</label>
+                <div class="flex-row">
+                    <input type="text" id="search-location"></input>
+                    <button type="submit" id="search-btn" class="flex-row"><i class='bx bx-search-alt'></i></button>
+                </div>
+                <div class="examples flex-col">
+                    <span>e.g Alexandria</span>
+                    <span>e.g Alexandria, Egypt</span>
+                </div>
+            </form>
+</div>
+        <div class="previous-entries">
+            <header class="flex-row">
+                <h3>Previous entries:</h3>
+                <i class='bx bx-reset' id="reset"></i>
+            </header>
+            <div id="results" class="results flex-col">
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

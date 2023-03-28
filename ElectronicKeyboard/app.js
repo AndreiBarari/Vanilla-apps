@@ -1,7 +1,6 @@
 const main = document.getElementById("main");
 const volume = document.getElementById("volume");
 
-// import data from "./data.json" assert { type: "json" };
 const data = [
   {
     letter: "a",
@@ -131,6 +130,17 @@ const data = [
   },
 ];
 
+function handleKeyPress(note, keyNote, audio) {
+  if (event.key === note.letter) {
+    audio.currentTime = 0;
+    audio.play();
+    keyNote.classList.add("playing");
+    setTimeout(() => {
+      keyNote.classList.remove("playing");
+    }, 100);
+  }
+}
+
 for (let note of data) {
   const keyNote = document.createElement("div");
   const keyText = document.createElement("span");
@@ -139,61 +149,15 @@ for (let note of data) {
   keyNote.classList.add(note.className, "key");
   keyNote.dataset.key = note.dataNote;
   keyText.classList.add("key-text");
-
   keyText.textContent = `${note.letter.toUpperCase()}`;
-
   keyNote.appendChild(keyText);
   main.appendChild(keyNote);
-  // main.appendChild(audio);
 
-  window.addEventListener("keypress", event => {
-    if (event.key === note.letter) {
-      audio.currentTime = 0;
-      audio.play();
-      keyNote.classList.add("playing");
-      setTimeout(() => {
-        keyNote.classList.remove("playing");
-      }, 100);
-    }
+  window.addEventListener("keypress", () => {
+    handleKeyPress(note, keyNote, audio);
   });
+
   volume.addEventListener("input", e => {
     audio.volume = e.target.value;
   });
 }
-// console.log(keyAudio);
-
-// window.addEventListener("keypress", event => {
-//   const keyNote = document.getElementsByClassName("key");
-//   const keyAudio = document.querySelectorAll("audio");
-//   for (let note of data) {
-//     const audio = new Audio(keyAudio[note.dataNote - 1].src);
-//     if (event.key === note.letter) {
-//       audio.currentTime = 0;
-//       audio.play();
-//       keyNote[note.dataNote - 1].classList.add("playing");
-//       setTimeout(() => {
-//         keyNote[note.dataNote - 1].classList.remove("playing");
-//       }, 100);
-//     }
-//   }
-// });
-
-// const song = "aasdassdaaasdassda";
-// let interval = null;
-// let counter = 0;
-
-// const songPlayed = () => {
-//   for (note of data) {
-//     if (note.letter === song[counter % song.length]) {
-//       const audio = new Audio(note.sound);
-//       audio.currentTime = 0;
-//       audio.play();
-//     }
-//   }
-
-//   counter++;
-// };
-
-// interval = setInterval(songPlayed, 1000);
-
-// clearInterval(interval);
