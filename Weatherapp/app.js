@@ -17,7 +17,7 @@ searchForm.addEventListener("submit", async function getData(e) {
   let distConv = true;
 
   if (inputValue !== "") {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${inputValue}&aqi=yes`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${inputValue}&aqi=yes`;
 
     const resultCard = document.createElement("div");
     resultCard.classList.add("result-card", "flex-col");
