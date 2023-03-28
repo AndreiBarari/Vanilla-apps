@@ -68,7 +68,7 @@ searchForm.addEventListener("submit", async function getData(e) {
 
     //Winds data
     const dataWinds = document.createElement("div");
-    dataWinds.classList.add("data-wind", "flex-row");
+    dataWinds.classList.add("data-wind", "flex-col");
     const windSpeed = document.createElement("div");
     windSpeed.classList.add("wind-speed");
     const windDirection = document.createElement("div");
@@ -107,8 +107,8 @@ searchForm.addEventListener("submit", async function getData(e) {
           ? `Visibility: ${data.current.vis_km.toFixed(2)} km`
           : `Visibility: ${(data.current.vis_km * 0.62).toFixed(2)} m`;
         windSpeed.textContent = distConv
-          ? `Wind speed: ${data.current.wind_kph.toFixed(2)} `
-          : `Wind speed: ${(data.current.wind_kph * 0.62).toFixed(2)} `;
+          ? `Wind speed: ${data.current.wind_kph.toFixed(2)} kmph`
+          : `Wind speed: ${(data.current.wind_kph * 0.62).toFixed(2)} mph`;
         distanceConvertor.textContent = distConv ? "Km" : "M";
       });
 
@@ -119,7 +119,7 @@ searchForm.addEventListener("submit", async function getData(e) {
       humidity.textContent = `Humidity: ${data.current.humidity} g/${"\u33A5"}`;
       visibility.textContent = `Visibility: ${data.current.vis_km.toFixed(2)} km`;
 
-      windSpeed.textContent = `Wind speed: ${data.current.wind_kph.toFixed(2)}`;
+      windSpeed.textContent = `Wind speed: ${data.current.wind_kph.toFixed(2)} kmph`;
       windDirection.textContent = `Wind direction: ${data.current.wind_dir}`;
 
       searchResult.appendChild(resultCard);
