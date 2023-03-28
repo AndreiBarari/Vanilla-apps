@@ -41,6 +41,16 @@ h2 {
 .app-card .app-icons .tooltip i {
   font-size: 36px;
 }
+.app-card .app-icons .tooltip .color-themes {
+  background-color: #f3ec78;
+  background-image: linear-gradient(319deg, #ffbc42 0%, #28965a 37%, #ee6352 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
 
 .app-card .app-icons .tooltip .tooltip-text {
   visibility: hidden;

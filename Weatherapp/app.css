@@ -9,7 +9,7 @@ body {
 
 /* Color themes */
 .sunny {
-  background: linear-gradient(to right bottom, #ffd54f 10%, #ffd54f 20%, #4dd0e1 40%, #4dd0e1 60%);
+  background: linear-gradient(to right bottom, #ffe283 5%, #ffeaa5 20%, #4dd0e1 40%, #4dd0e1 60%);
 }
 .cloudy {
   background: linear-gradient(to bottom, #e6e9f0, #c2cbe8, #8ca6db, #5476c7, #1e499f);
