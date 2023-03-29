@@ -10,38 +10,47 @@
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/resets.css">
+
+
+    <script src="https://kit.fontawesome.com/b356958465.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="nav">
         <a class="anchor-btn" href="../index.html">Home</a>
     </div>
-    <div class="main">
-        <h1>Rock, paper, scissors game!</h1>
+    <div class="main flex-col">
+        <h1>Rock, paper, scissors!</h1>
+        <input id="refresh" type="button" value="New game!">
 
-        <div class="choices">
-            <button id="rock" class="choice" value="rock"></button>
-            <button id="paper" class="choice" value="paper"></button>
-            <button id="scissor" class="choice" value="scissors"></button>
+        <div class="choices flex-row">
+            <button id="rock" class="choice" value="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+            <button id="paper" class="choice" value="paper"><i class="fa-solid fa-scroll"></i></button>
+            <button id="scissor" class="choice" value="scissors"><i class="fa-solid fa-scissors"></i></button>
         </div>
 
-        <div class="gameResults">
-            <div class="roundResults">
-                <span class="player">Player</span>
-                <span class="score" id="playerScore"></span>
-                <span id="playerChoice"></span>
+        <div class="game-results flex-col">
+            <div class="roundResults flex-row">
+                <div class="result-side flex-col">
+                    <span class="player">You</span>
+                    <span class="score flex-row" id="playerScore"></span>
+                    <span id="playerChoice"></span>
+                </div>
+                <div class="result-side flex-col">
+                    <span class="player">NPC</span>
+                    <span class="score flex-row" id="computerScore"></span>
+                    <span id="npcChoice"></span>
+                </div>
             </div>
-            <span class="" id="result"></span>
-            <div class="roundResults">
-                <span class="player">NPC</span>
-                <span class="score" id="computerScore"></span>
-                <span id="npcChoice"></span>
+            <div class="flex-col outcome">
+                <span  id="result"></span>
+                <div class="turn-outcome flex-col">
+                </div>
             </div>
         </div>
         <div>
 
         </div>
-        <input id="refresh" type="button" value="New game!">
     </div>
 
 
