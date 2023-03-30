@@ -2,6 +2,7 @@ const main = document.getElementById("main");
 const volume = document.getElementById("volume");
 const springSongBtn = document.querySelector("#primavara");
 const undertakerSongBtn = document.querySelector("#intro-undertaker");
+const ocroteste = document.querySelector("#ocroteste");
 
 const data = [
   {
@@ -297,6 +298,103 @@ const introUndertaker = [
   { key: "s", duration: 200 },
 ];
 
+const ocrotesteSong = [
+  { key: "f", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "g", duration: 350 },
+  { key: "f", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 700 },
+  { key: "f", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "g", duration: 350 },
+  { key: "f", duration: 350 },
+  { key: "f", duration: 350 },
+  { key: "d", duration: 350 },
+  { key: "d", duration: 700 },
+  { key: "h", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "j", duration: 350 },
+  { key: "j", duration: 350 },
+  { key: ";", duration: 400 },
+  { key: "l", duration: 400 },
+  { key: "k", duration: 900 },
+  { key: "k", duration: 350 },
+  { key: ";", duration: 350 },
+  { key: "l", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 300 },
+  { key: "j", duration: 300 },
+  { key: "j", duration: 550 },
+  { key: "j", duration: 350 },
+  { key: "l", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "j", duration: 300 },
+  { key: "j", duration: 350 },
+  { key: "h", duration: 300 },
+  { key: "h", duration: 700 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 200 },
+  { key: "j", duration: 200 },
+  { key: "h", duration: 300 },
+  { key: "j", duration: 350 },
+  { key: "j", duration: 350 },
+  { key: "h", duration: 400 },
+  { key: "g", duration: 400 },
+  { key: "f", duration: 1500 },
+  { key: "f", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "g", duration: 350 },
+  { key: "f", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 700 },
+  { key: "f", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "g", duration: 350 },
+  { key: "f", duration: 350 },
+  { key: "f", duration: 350 },
+  { key: "d", duration: 350 },
+  { key: "d", duration: 700 },
+  { key: "h", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "h", duration: 350 },
+  { key: "j", duration: 350 },
+  { key: "j", duration: 350 },
+  { key: ";", duration: 400 },
+  { key: "l", duration: 400 },
+  { key: "k", duration: 900 },
+  { key: "k", duration: 350 },
+  { key: ";", duration: 350 },
+  { key: "l", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 300 },
+  { key: "j", duration: 300 },
+  { key: "j", duration: 550 },
+  { key: "j", duration: 350 },
+  { key: "l", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "j", duration: 300 },
+  { key: "j", duration: 350 },
+  { key: "h", duration: 300 },
+  { key: "h", duration: 700 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 350 },
+  { key: "k", duration: 200 },
+  { key: "j", duration: 200 },
+  { key: "h", duration: 300 },
+  { key: "j", duration: 350 },
+  { key: "j", duration: 350 },
+  { key: "h", duration: 400 },
+  { key: "g", duration: 400 },
+  { key: "f", duration: 0 },
+];
+
 // Arrays to play //
 
 let toggleReset = true;
@@ -331,6 +429,15 @@ undertakerSongBtn.addEventListener("click", () => {
   if (toggleReset) {
     toggleReset = !toggleReset;
     autoPlaySong(introUndertaker);
+  } else if (!toggleReset) {
+    toggleReset = !toggleReset;
+    resetSong();
+  }
+});
+ocroteste.addEventListener("click", () => {
+  if (toggleReset) {
+    toggleReset = !toggleReset;
+    autoPlaySong(ocrotesteSong);
   } else if (!toggleReset) {
     toggleReset = !toggleReset;
     resetSong();
