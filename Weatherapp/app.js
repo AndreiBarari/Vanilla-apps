@@ -122,7 +122,7 @@ searchForm.addEventListener("submit", async function getData(e) {
       windSpeed.textContent = `Wind speed: ${data.current.wind_kph.toFixed(2)} kmph`;
       windDirection.textContent = `Wind direction: ${data.current.wind_dir}`;
 
-      searchResult.appendChild(resultCard);
+      searchResult.insertBefore(resultCard, searchResult.firstChild);
       results.style.visibility = "visible";
     });
   }

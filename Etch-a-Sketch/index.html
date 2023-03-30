@@ -20,20 +20,26 @@
         <a class="anchor-btn" href="../index.html">Home</a>
     </div>
 
-    <div class="main" id="main">
-        <div class="rightMenu">
-            <button id="rainbow" onclick="color()">Rainbow</button>
-            <button id="blackColor">Black</button>
-            <button id="erase">Eraser</button>
+    <div class="main flex-col" id="main">
+        <div class="tablet flex-row">
+            <div class="rightMenu">
+                <button class="tablet-btn" id="rainbow" onclick="color()">Rainbow</button>
+                <button class="tablet-btn" id="blackColor">Black</button>
+                <button class="tablet-btn" id="erase">Eraser</button>
 
-        </div>
-        <div class="container" id="container">
-        </div>
-        <div class="leftMenu">
-            <button id="resize">Resize</button>
+            </div>
+            <div class="container" id="container">
+            </div>
+            <div class="leftMenu">
+                <button class="tablet-btn" id="resize">Resize</button>
 
-            <button id="reset">Clear</button>
-            <input id="colorPicker" type="color">
+                <button class="tablet-btn" id="reset">Reset</button>
+                <input id="colorPicker" type="color">
+            </div>
+        </div>
+        <div class="toggle-menu flex-col">
+            <p>Toggle drawing On/Off by pressing the S key</p>
+            <button class="toggle-btn" id="toggle">S</button>
         </div>
     </div>
 

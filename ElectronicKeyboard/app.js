@@ -1,5 +1,7 @@
 const main = document.getElementById("main");
 const volume = document.getElementById("volume");
+const springSongBtn = document.querySelector("#primavara");
+const undertakerSongBtn = document.querySelector("#intro-undertaker");
 
 const data = [
   {
@@ -161,3 +163,176 @@ for (let note of data) {
     audio.volume = e.target.value;
   });
 }
+
+// Autoplay
+let isPlaying = false;
+
+function autoPlay(letter) {
+  for (let note of data) {
+    if (note.letter === letter) {
+      const keyNote = document.querySelector(`[data-key="${note.dataNote}"]`);
+      const audio = new Audio(note.sound);
+      audio.currentTime = 0;
+      audio.play();
+      keyNote.classList.add("playing");
+      setTimeout(() => {
+        keyNote.classList.remove("playing");
+      }, 100);
+      return audio;
+    }
+  }
+}
+
+// Arrays to play //
+
+const vineVinePrimavara = [
+  { key: "a", duration: 300 },
+  { key: "a", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "g", duration: 600 },
+  { key: "h", duration: 300 },
+  { key: "g", duration: 300 },
+  { key: "f", duration: 600 },
+  { key: "d", duration: 700 },
+  { key: "a", duration: 300 },
+  { key: "a", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "g", duration: 600 },
+  { key: "h", duration: 300 },
+  { key: "g", duration: 300 },
+  { key: "f", duration: 600 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 300 },
+  { key: "s", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 600 },
+  { key: "g", duration: 600 },
+  { key: "s", duration: 300 },
+  { key: "s", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 600 },
+  { key: "a", duration: 1000 },
+  { key: "a", duration: 300 },
+  { key: "a", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "g", duration: 600 },
+  { key: "h", duration: 300 },
+  { key: "g", duration: 300 },
+  { key: "f", duration: 600 },
+  { key: "d", duration: 700 },
+  { key: "a", duration: 300 },
+  { key: "a", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "g", duration: 600 },
+  { key: "h", duration: 300 },
+  { key: "g", duration: 300 },
+  { key: "f", duration: 600 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 300 },
+  { key: "s", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 600 },
+  { key: "g", duration: 600 },
+  { key: "s", duration: 300 },
+  { key: "s", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 600 },
+  { key: "a", duration: 1000 },
+  { key: "a", duration: 300 },
+  { key: "a", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "g", duration: 600 },
+  { key: "h", duration: 300 },
+  { key: "g", duration: 300 },
+  { key: "f", duration: 600 },
+  { key: "d", duration: 700 },
+  { key: "a", duration: 300 },
+  { key: "a", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "d", duration: 300 },
+  { key: "g", duration: 600 },
+  { key: "h", duration: 300 },
+  { key: "g", duration: 300 },
+  { key: "f", duration: 600 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 300 },
+  { key: "s", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 600 },
+  { key: "g", duration: 600 },
+  { key: "s", duration: 300 },
+  { key: "s", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "f", duration: 300 },
+  { key: "d", duration: 600 },
+  { key: "s", duration: 600 },
+  { key: "a", duration: 1000 },
+];
+const introUndertaker = [
+  { key: "s", duration: 700 },
+  { key: "s", duration: 700 },
+  { key: "s", duration: 200 },
+  { key: "s", duration: 700 },
+  { key: "f", duration: 500 },
+  { key: "d", duration: 200 },
+  { key: "d", duration: 500 },
+  { key: "s", duration: 200 },
+  { key: "s", duration: 400 },
+  { key: "w", duration: 400 },
+  { key: "s", duration: 200 },
+];
+
+// Arrays to play //
+
+let toggleReset = true;
+
+function autoPlaySong(song) {
+  let duration = 0;
+  for (let el of song) {
+    setTimeout(() => {
+      autoPlay(el.key);
+    }, duration);
+    duration += el.duration;
+  }
+}
+
+function resetSong() {
+  for (let i = 1; i < 99999; i++) {
+    window.clearTimeout(i);
+  }
+}
+
+springSongBtn.addEventListener("click", () => {
+  if (toggleReset) {
+    toggleReset = !toggleReset;
+    autoPlaySong(vineVinePrimavara);
+  } else if (!toggleReset) {
+    toggleReset = !toggleReset;
+    resetSong();
+  }
+});
+
+undertakerSongBtn.addEventListener("click", () => {
+  if (toggleReset) {
+    toggleReset = !toggleReset;
+    autoPlaySong(introUndertaker);
+  } else if (!toggleReset) {
+    toggleReset = !toggleReset;
+    resetSong();
+  }
+});

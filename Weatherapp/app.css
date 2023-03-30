@@ -107,9 +107,19 @@ body {
   font-size: 1.3em;
 }
 .main .previous-entries header i {
+  position: fixed;
+}
+.main .previous-entries {
+  height: 796px;
+  min-width: 360px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main .previous-entries header i {
   font-size: 1.3em;
   cursor: pointer;
   transition: ease-in-out 0.2s all;
+  position: sticky;
 }
 .main .previous-entries header i:hover {
   transform: rotate(-360deg);
@@ -177,4 +187,12 @@ body {
 .main .previous-entries .results .result-card .card-data .data-wind {
   justify-content: space-evenly;
   gap: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .previous-entries {
+    height: auto;
+    max-height: 500px;
+    overflow-y: scroll;
+  }
 }

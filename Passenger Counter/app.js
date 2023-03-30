@@ -50,10 +50,6 @@ const randOnBus = () => {
   let debus = Math.floor(Math.random() * onBus);
   let availableSeats = maxSeats - onBus + debus;
 
-  // console.log(onBus);
-  // console.log(debus);
-  // console.log(availableSeats);
-
   return [debus, availableSeats, onBus];
 };
 
@@ -107,7 +103,6 @@ increment.addEventListener("click", function incFunction() {
 
 decrement.addEventListener("click", function decFunction() {
   count--;
-  // totalCount--;
   passengers.innerText = count;
   valueCheck();
 });

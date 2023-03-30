@@ -3,7 +3,6 @@
   color: #fff;
 }
 .main {
-  display: flex;
   gap: 12px;
   background-color: #6500b0;
   border-radius: 20%;
@@ -11,7 +10,40 @@
   transition: ease-in-out 0.2s;
 }
 
-.rightMenu,
+.toggle-menu {
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.toggle-menu p {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 3px 2px #000;
+}
+
+.toggle-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 3px 1px #000;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  transition: ease-in-out 0.2s all;
+  cursor: pointer;
+}
+
+.pressed {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px #fff;
+  animation: none;
+}
+
+.main .rightMenu,
 .leftMenu {
   display: flex;
   flex-direction: column;
@@ -25,7 +57,7 @@
   margin-left: 24px;
 }
 
-button,
+.tablet-btn,
 input {
   width: 100px;
   height: 50px;
@@ -37,7 +69,7 @@ input {
   font-size: 1.2em;
   transition: ease-in-out 0.3s;
 }
-button:hover,
+.tablet-btn:hover,
 input:hover {
   transform: scale(1.05);
   box-shadow: 0 0 24px #fff;

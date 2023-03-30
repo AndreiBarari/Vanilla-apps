@@ -2,7 +2,10 @@ const container = document.querySelector("#container");
 const reset = document.getElementById("reset");
 const colorPicker = document.querySelector("#colorPicker");
 const title = document.getElementById("title");
+const toggle = document.querySelector("#toggle");
+
 let nrCells = 10;
+let toggleSwitch = false;
 
 function generateGrid(size) {
   for (let i = 0; i < size * size; i++) {
@@ -14,6 +17,27 @@ function generateGrid(size) {
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   }
 }
+
+window.addEventListener("keyup", event => {
+  if (event.key === "s") {
+    toggleSwitch = !toggleSwitch;
+    toggle.classList.remove("pressed");
+  }
+  if (toggleSwitch) {
+    toggle.classList.add("pressed");
+  }
+  return toggleSwitch;
+});
+
+toggle.addEventListener("click", () => {
+  toggleSwitch = !toggleSwitch;
+  toggle.classList.remove("pressed");
+
+  if (toggleSwitch) {
+    toggle.classList.add("pressed");
+  }
+  return toggleSwitch;
+});
 
 generateGrid(nrCells);
 
@@ -30,6 +54,7 @@ function color() {
   let cells = document.querySelectorAll(".cell");
   cells.forEach(cell => {
     cell.addEventListener("mouseover", () => {
+      if (!toggleSwitch) return;
       cell.style.backgroundColor = randColor();
     });
   });
@@ -38,6 +63,7 @@ function color() {
 color();
 
 reset.addEventListener("click", () => {
+  toggleSwitch = true;
   let cells = document.querySelectorAll(".cell");
   cells.forEach(cell => {
     cell.style.backgroundColor = "white";
@@ -75,6 +101,7 @@ colorPicker.addEventListener("click", () => {
   let cells = document.querySelectorAll(".cell");
   cells.forEach(cell => {
     cell.addEventListener("mouseover", () => {
+      if (!toggleSwitch) return;
       cell.style.backgroundColor = colorPicker.value;
     });
   });
@@ -85,6 +112,7 @@ document.getElementById("blackColor").addEventListener("click", () => {
   let cells = document.querySelectorAll(".cell");
   cells.forEach(cell => {
     cell.addEventListener("mouseover", () => {
+      if (!toggleSwitch) return;
       cell.style.backgroundColor = "black";
     });
   });
@@ -95,6 +123,7 @@ document.getElementById("erase").addEventListener("click", () => {
   let cells = document.querySelectorAll(".cell");
   cells.forEach(cell => {
     cell.addEventListener("mouseover", () => {
+      if (!toggleSwitch) return;
       cell.style.backgroundColor = "white";
     });
   });

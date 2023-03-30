@@ -17,19 +17,24 @@
     <div class="nav">
         <a class="anchor-btn" href="../index.html">Home</a>
     </div>
-    <div class="paino flex-col">
-        <header class="flex-row">
-            <h4>Electronic keyboard</h4>
-            <div class="collumn volume-slider flex-col">
-                <span>Volume</span> <input type="range" id="volume" min="0" max="1" value="0.5" step="any">
+    <div class="main flex-col">
+        <div class="paino flex-col">
+            <header class="flex-row">
+                <h4>Electronic keyboard</h4>
+                <div class="collumn volume-slider flex-col">
+                    <span>Volume</span> <input type="range" id="volume" min="0" max="1" value="0.5" step="any">
+                </div>
+            </header>
+            <div id="main">
             </div>
-        </header>
-        <div id="main">
+        </div>
+        <div class="songs flex-col" >
+            <span class="song" id="primavara">Vine, vine primavara!</span>
+            <span class="song" id="intro-undertaker">Intro Undertaker!</span>
+
         </div>
     </div>
 
-
-    <!-- <script type="module" src="app.js"></script> -->
     <script src="app.js"></script>
 
 </body>

@@ -88,6 +88,10 @@ body {
   background-color: #ecf2ff;
 }
 
+.turn-outcome {
+  gap: 2px;
+}
+
 .turn-result {
   font-size: 20px;
 }
