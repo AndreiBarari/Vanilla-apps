@@ -443,3 +443,60 @@ ocroteste.addEventListener("click", () => {
     resetSong();
   }
 });
+
+// let currentTimeoutId = null;
+// let currentSong = null;
+
+// function autoPlaySong(song) {
+//   // Stop the currently playing song if it's not the same song as the one being played
+//   if (currentSong !== song) {
+//     stopSong();
+//   }
+//   // Play the new song
+//   let duration = 0;
+
+//   for (let el of song) {
+//     currentTimeoutId = setTimeout(() => {
+//       autoPlay(el.key);
+//     }, duration);
+//     duration += el.duration;
+//   }
+//   // Update the current song
+//   currentSong = song;
+// }
+
+// function stopSong() {
+//   // Stop the currently playing song
+//   for (let i = 1; i < 99999; i++) {
+//     clearTimeout(i);
+//   }
+//   currentSong = null;
+// }
+
+// function resetSong() {
+//   for (let i = 1; i < 99999; i++) {
+//     window.clearTimeout(i);
+//   }
+// }
+
+// springSongBtn.addEventListener("click", () => {
+//   if (currentSong === vineVinePrimavara) {
+//     resetSong(springSongBtn);
+//   } else {
+//     autoPlaySong(vineVinePrimavara);
+//     if (currentSong === introUndertaker) {
+//       stopSong();
+//     }
+//   }
+// });
+
+// undertakerSongBtn.addEventListener("click", () => {
+//   if (currentSong === introUndertaker) {
+//     resetSong(undertakerSongBtn);
+//   } else {
+//     autoPlaySong(introUndertaker);
+//     if (currentSong === vineVinePrimavara) {
+//       stopSong();
+//     }
+//   }
+// });
